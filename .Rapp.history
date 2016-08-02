@@ -1,0 +1,270 @@
+head (x)
+model.adjr2= lm (Salary~ AtBat+ Hits+ Walks+ CAtBat+ CRuns+ CRBI +CWalks+ LeagueN+ DivisionW+ PutOuts+ Assists)
+mydata= read.csv (file.choose(), header= TRUE)
+attach (mydata)
+names (mydata)
+mydata= read.csv (file.choose(), header= TRUE)
+attach (mydata)
+names (mydata)
+?sipsets
+?subsbsets
+?subsets
+?"subsets"
+install.packages("ISLR")
+library("ISLR")
+head(Hitters)
+Hitters.new = na.omit(Hitters)
+mydata = Hitters.new[,c("AtBat","Hits","HmRun","Runs","Years","Salary")]
+head (mydata)
+install.packages("MVA")
+library ("MVA")
+boxplots (Salary)
+boxplot (Salary)
+boxplot ("Salary")
+boxplot (Salary,d datd= mydata)
+par (mfrow= c (1,5))
+plot (Salary~ AtBat)
+attach (mydata)
+plot (Salary~ AtBat)
+plot (Salary~ Hits)
+boxplot (Salary~ AtBat)
+z.Salary= scale (Salary)
+bvbox (mydata)
+which (z.Salary>3)
+which )z.Salary <-3)
+which (z.Salary< 33)
+which (z.Salary< -3)
+z.AtBat= scale (AtBat)
+z.Hits= scale (Hits)
+z.HmRun= scale (HmRun)
+z.Runs= scale (Runs)
+z.Years= scale (Years)
+plot (z.Salary~z.AtBat)
+par (mfrow= c (1,5))
+plot (z.Salary~z.AtBat)
+plot (z.Salary~z.Hits)
+plot (z.Salary~z.HmRun)
+plot (z.Salary~z.Runs)
+plot (z.Salary~z.Years)
+boxplot (z.Salary)
+?quantile
+quantile.25= quantile (z.Salary, probs= 0.25)
+quantile.75= quantile (z.Salary, probs= 0.75)
+IQR= quantile.75- quantile.25
+upper.fence= quantile.75+ IQR
+lower.fence= quantile.25- IQR
+upper.fence= quantile.75+ 1.5* IQR
+lower.fence= quantile.25- 1.5* IQR
+which (z.Salary< lower.fence)
+which (z.Salary> upper.fence)
+mydata = read.table(file.choose(),header=TRUE)
+attach (mydata)
+head (mydata)
+boxplot (igf)
+boxplot(igf∼sex)
+boxplot (igf~ sex)
+boxplot (igf~ age)
+plot (igf~ age)
+z.igf= scale (igf)
+z.age= scale (age)
+cor (z.igf, z.age)
+fit = lm(igf[age < 13] ∼ age[age < 13])
+fit= lm (igf [age <13]~ age [age< 13])
+summary (fit)
+predict (fit, age[age < 13]= 20)
+install.package ("aqirl")
+install.packages ("aqirl")
+library ("aqirl")
+swil ()
+swirl ()
+swirl
+swirl()
+swirl ()
+install.packages ("swirl")
+library ("sairl")
+library ("swirl")
+swirl()
+library (httr)
+myapp= oauth_app ("github", key= "ede9dc1088a276ee13a2",secret= "e87fd153c05f12f22ad7391ebbaa5db0710240f8")
+sig= sign_oauth1.0 (myapp, token= "d5ccd71597290a7db0232f27c341162b5ed7e091")
+1
+homeTL= GET ("https://api.github.com/users/jtleek/repos", sig)
+homeTL
+homeTL= GET ("https://api.github.com/date/users/jtleek/repos", sig)
+homeTL
+myapp= oauth_app ("github", key= "56b637a5baffac62cad9",secret= "8e107541ae1791259e9987d544ca568633da2ebf")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+req <- with_config(gtoken, GET("https://api.github.com/rate_limit"))
+gtoken <- config(token = github_token)
+github_token= oauth2.0_token(oauth_endpoints("github"), myapp)
+github_token= oauth1.0_token(oauth_endpoints("github"), myapp)
+github_token= oauth2.0_token(oauth_endpoints("github"), myapp)
+install.packages("httpuv")
+github_token= oauth2.0_token(oauth_endpoints("github"), myapp)
+sig= sign_oauth1.0 (myapp, github_token)
+homeTL= GET ("https://api.github.com/rate_limit", sig)
+gtoken <- config(token = github_token)
+req <- GET("https://api.github.com/rate_limit", gtoken)
+stop_for_status(req)
+content(req)
+req <- with_config(gtoken, GET("https://api.github.com/rate_limit"))
+stop_for_status(req)
+content(req)
+homeTL= GET ("https://api.github.com/rate_limit", sig)
+sig= sign_oauth1.0 (myapp, github_token)
+homeTL= GET ("https://api.github.com/rate_limit", sig)
+gtoken <- config(token = github_token)
+req <- GET("https://api.github.com/rate_limit", gtoken)
+stop_for_status(req)
+content(req)
+homeTL= GET ("https://api.github.com/users/jtleek/repos", sig)
+sig= sign_oauth1.0 (myapp, github_token)
+homeTL= GET ("https://api.github.com/users/jtleek/repos", sig)
+myapp= oauth_app ("github", key= "56b637a5baffac62cad9",secret= "8e107541ae1791259e9987d544ca568633da2ebf")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+sig= sign_oauth1.0 (myapp, token= github_token)
+homeTL= GET ("https://api.github.com/users/jtleek/repos", sig)
+github_token
+gtoken <- config(token = github_token)
+gtoken
+req <- GET("https://api.github.com/rate_limit", gtoken)
+req
+stop_for_status(req)
+content(req)
+req
+Client_ID <- 'ede9dc1088a276ee13a2'
+Client_Secret <- 'e87fd153c05f12f22ad7391ebbaa5db0710240f8'
+myapp <- oauth_app("First APP", key = Client_ID, secret = Client_Secret)
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+library ("httpuv")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+gtoken <- config(token = github_token)
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+stop_for_status(req)
+json1 = content(req)
+json2 = jsonlite::fromJSON(jsonlite::toJSON(json1))
+json2[json2$full_name == "jtleek/datasharing", ]$created_at
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+class(jason2)
+class(json2)
+json2 <- jsonlite::toJSON(json1)
+class(json2)
+json3 <- jsonlite::toJSON(json2)
+class(json3)
+json3 <- jsonlite::fromJSON(json2)
+class(json3)
+head(json3)
+names(json3)
+names(json3$full_name)
+json$full_name
+json3$full_name
+json3$full_names$jtleek/datasharing
+json3$full_names==jtleek/datasharing
+names(json2)
+names(json3)
+json3$created_at
+json3[json3$full_names = "jtleek/datasharing",]
+json3[json3$full_names == "jtleek/datasharing",]
+json3[json3$full_names == "jtleek/datasharing",]$created_at
+json3[json3$full_name == "jtleek/datasharing",]
+class(json2)
+json3 <- jsonlite::fromJSON(json2)
+class(json3)
+set.seed(123)
+DT<-data.table(x=sample(letters[1:3],1E5,TRUE))
+1
+install.packages("xlsx")
+library("xlsx")
+CameraData2 <-read.xlsx("/Users/chengdong/Get_Clean_Data/Camera.xlsx", sheetIndex=1, header=TRUE) #didn't run
+install.packages("XML")
+library("XML")
+fileUrl <-"http://www.w3schools.com/xml/simple/xml"
+doc <-xmlTreeParse(fileUrl, useInternal=TRUE)
+Y
+y
+install.packages("XML")
+library("XML")
+fileUrl <-"http://www.w3schools.com/xml/simple/xml"
+doc <-xmlTreeParse(fileUrl, useInternal=TRUE)
+getwd()
+library(httr)
+oauth_endpoints("github")
+myapp <-oauth_app("github", key="ede9dc1088a276ee13a2", secret="e87fd153c05f12f22ad7391ebbaa5db0710240f8")
+github_token <-oauth2.0_token(oauth_endponints("github"), myapp)
+github_token <-oauth2.0_token(oauth_endpoints("github"), myapp)
+install.packages("httpuv")
+library("httpuv")
+github_token <-oauth2.0_token(oauth_endpoints("github"), myapp)
+gtoken <-config(token=github_token)
+req <-GET("https://api.github.com/rate_limit", gtoken)
+req <-GET("https://api.github.com/rate_limit", github_token)
+req <-GET("https://api.github.com/rate_limit", gtoken)
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+install.packages(httr)
+install.packages("httr")
+library("httr")
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+req <- GET("https://api.github.com/rate_limit", config(token = github_token))
+github_token <- oauth2.0_token(github, myapp)
+github_token <- oauth2.0_token("github", myapp)
+github_token <-oauth2.0_token(oauth_endpoints("github"), myapp)
+gtoken <- config(token = github_token)
+req <- GET("https://api.github.com/users/jtleek/repos", gtoken)
+req <- GET("https://api.github.com/users/jtleek/repos", "gtoken")
+library(httr)#
+require(httpuv)#
+require(jsonlite)#
+#
+oauth_endpoints("github")#
+#
+myapp <- oauth_app("github", "38e093d472d919cf750a","e54e15d23251c09c2056389eec8ac93cb20ddfaf")#
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp) # need authorize the permission on popup menu#
+req <- GET("https://api.github.com/users/jtleek/repos", config(token = github_token))#
+stop_for_status(req)#
+output <- content(req)#
+list(output[[5]]$name, output[[5]]$created_at)
+library(httr)
+library(httpuv)
+require(httpuv)
+require(jsonlite)
+oauth_endpoints("github")
+myapp <-oauth_app("github", key= "ede9dc1088a276ee13a2", secret="e87fd153c05f12f22ad7391ebbaa5db0710240f8")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+c
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp)
+library(httr)#
+require(httpuv)#
+require(jsonlite)#
+#
+oauth_endpoints("github")#
+#
+myapp <- oauth_app("github", "38e093d472d919cf750a","e54e15d23251c09c2056389eec8ac93cb20ddfaf")
+github_token <- oauth2.0_token(oauth_endpoints("github"), myapp) # need authorize the permission on popup menu
+req <- GET("https://api.github.com/users/jtleek/repos", config(token = github_token))
+stop_for_status(req)
+output <- content(req)
+list(output[[5]]$name, output[[5]]$created_at)
+content(req)
+head(putput)
+head(output)
+list(output[[5]]$name, output[[5]]$created_at)
+list(output[[8]]$name, output[[8]]$created_at)
+library(swirl)
+swirl()
+getwd()
+setwd("/Users/chengdong/Desktop/Coursera_R Programming")
+getwd()
+myfunction
+ls()
+getwd()
+li()
+ls()
+myfunction <- function(x) {#
+  y <- rnorm(100)#
+  mean(y)#
+}
+mufunction
+myfunction
+myfunction()
+source("myfunction.R")
+ls()
